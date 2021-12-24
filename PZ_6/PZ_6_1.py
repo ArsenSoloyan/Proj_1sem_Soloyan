@@ -3,16 +3,18 @@
 
 import random
 
-N = int(input())
-arr = []
-k = int(input())
-l = int(input())
-for i in range(N):
-    ran = random.randint(1,100)
-    arr.append(ran)
-    arr.sort()
-print(arr)
+list1 = []
 
-for i in range(N):
-    i += i
-    if arr = [k] or arr =
+N = int(input("Введите количество элементов списка: "))
+for i in range(N):                                      # Находим случайный список размера N
+    list1.append(random.randint(1, N))
+    list1.sort()
+print("Получившийся случайный список: ", list1)
+K, L = int(input("Введите номер элемента K: ")), int(input("Введите номер элемента L: "))
+sum1 = 0
+for i in range(len(list1)):                             # Находим сумму необходимых элементов
+    if K - 1 > i or i > L - 1:
+        sum1 += list1[i]
+    else:
+        continue
+print("Сумма элементов списка, кроме элементов с номерами от K до L включительно: ", sum1)
